@@ -1,0 +1,11 @@
+[{"wait": 5}, {"clicks": 6, "at": [640, 360], "gap": 1.2}, {"wait": 6}, {"shot": "title"},
+ {"move": [642, 441]}, {"wait": 1}, {"shot": "title-hover1"},
+ {"move": [642, 518]}, {"wait": 1}, {"shot": "title-hover3"},
+ {"click": [642, 518]}, {"wait": 4}, {"shot": "config"},
+ {"rclick": [640, 360]}, {"wait": 3}, {"shot": "back1"},
+ {"click": [642, 479]}, {"wait": 4}, {"shot": "load"},
+ {"rclick": [640, 360]}, {"wait": 3}, {"shot": "back2"},
+ {"click": [642, 556]}, {"wait": 4}, {"shot": "cg"},
+ {"rclick": [640, 360]}, {"wait": 3}, {"shot": "back3"},
+ {"click": [642, 595]}, {"wait": 2}, {"shot": "exitdlg"}, {"screen": "exitdlg-screen"},
+ {"dialog_button": "right"}, {"wait": 2}, {"shot": "after-no"}]

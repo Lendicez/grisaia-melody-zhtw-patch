@@ -45,7 +45,8 @@ def main():
     st = out / 'selftest' / 'game'
     if st.parent.exists(): shutil.rmtree(st.parent)
     st.mkdir(parents=True)
-    names = ['GrisaiaAno3.exe', 'scene.int', 'config.int', 'fes.int']
+    arcs = list(json.load(open(a.payload, encoding='utf-8'))['archives'])
+    names = ['GrisaiaAno3.exe'] + arcs
     for n in names: shutil.copy2(Path(a.orig) / n, st / n)
     res = {'exe': exe.name, 'sha256': sha(exe), 'steps': []}
     ok = True
@@ -57,7 +58,7 @@ def main():
         from cst import Scene
         import zlib, struct
         key = key_from_pass(pass_from_exe(str(st / 'GrisaiaAno3.exe')))
-        for n in ('scene.int', 'config.int', 'fes.int'):
+        for n in arcs:
             A, B = Archive(str(st / n), key), Archive(str(Path(a.expect) / n), key)
             closers = (A.f, B.f)
             for (en, _, _), (bn, _, _) in zip(A.entries, B.entries):
@@ -71,7 +72,7 @@ def main():
     r = run(exe, '/install', str(st)); res['steps'].append(['install-again', r.stdout])
     r = run(exe, '/uninstall', str(st)); ok &= r.returncode == 0
     for n in names[1:]: ok &= sha(st / n) == sha(Path(a.orig) / n)
-    for n in ('version.dll', 'zhtw_map.bin', 'zhtw.ini'): ok &= not (st / n).exists()
+    for n in ('version.dll', 'zhtw_map.bin', 'zhtw.ini', 'language.txt'): ok &= not (st / n).exists()
     res['steps'].append(['uninstall', r.stdout]); res['selftest_ok'] = bool(ok)
     (out / 'release.json').write_text(json.dumps(res, ensure_ascii=False, indent=1), 'utf-8')
     print('SELFTEST', 'OK' if ok else 'FAILED')

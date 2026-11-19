@@ -1,0 +1,12 @@
+[{"wait": 1.0}, {"shot": "boot1"}, {"wait": 1.5}, {"shot": "boot2"}, {"wait": 2.0}, {"shot": "boot3"}, {"wait": 2.0}, {"shot": "boot4"},
+ {"clicks": 6, "at": [640, 360], "gap": 1.2}, {"wait": 6}, {"shot": "title"},
+ {"click": [642, 518]}, {"wait": 4}, {"shot": "menu"},
+ {"click": [970, 300]}, {"wait": 3}, {"shot": "text"},
+ {"rclick": [640, 360]}, {"wait": 3},
+ {"click": [310, 480]}, {"wait": 3}, {"shot": "dialog"},
+ {"rclick": [640, 360]}, {"wait": 3},
+ {"click": [750, 480]}, {"wait": 3}, {"shot": "system"},
+ {"rclick": [640, 360]}, {"wait": 3},
+ {"click": [750, 300]}, {"wait": 3}, {"shot": "sound"},
+ {"rclick": [640, 360]}, {"wait": 3}, {"rclick": [640, 360]}, {"wait": 3},
+ {"click": [642, 556]}, {"wait": 4}, {"shot": "cg"}]

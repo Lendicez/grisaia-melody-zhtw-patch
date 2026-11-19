@@ -1,0 +1,42 @@
+{
+ "region": [
+  55,
+  69,
+  640,
+  90
+ ],
+ "font": "msjhbd.ttc",
+ "thr": 14,
+ "groups": [
+  [
+   {
+    "name": "sys_bgm#067",
+    "zh": "請點選要鑑賞的 BGM。"
+   },
+   {
+    "name": "sys_cg#057",
+    "zh": "請點選要鑑賞的 CG 縮圖。"
+   },
+   {
+    "name": "sys_movie#043",
+    "zh": "請點選要鑑賞的影片縮圖。"
+   },
+   {
+    "name": "sys_scene#073",
+    "zh": "請點選要回想的場景縮圖。"
+   }
+  ],
+  [
+   {
+    "name": "sys_secret#038",
+    "zh": "下載系統語音。",
+    "opt": {
+     "abs": 120,
+     "dilate": 2,
+     "radius": 3
+    }
+   }
+  ]
+ ],
+ "h_adj": 1
+}

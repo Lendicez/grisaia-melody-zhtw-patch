@@ -176,6 +176,16 @@ namespace GrisaiaZhTW
                     }
                     e.NewData = Fes.Pack(data, text);
                 }
+                else if (type == "hg3")
+                {
+                    var repl = new Dictionary<int, byte[][]>();
+                    foreach (var fv in (Dictionary<string, object>)spec["frames"])
+                    {
+                        var f = (Dictionary<string, object>)fv.Value;
+                        repl[int.Parse(fv.Key)] = new[] { Convert.FromBase64String((string)f["stdinfo"]), Convert.FromBase64String((string)f["img"]), Encoding.ASCII.GetBytes((string)f["img_sha"]) };
+                    }
+                    e.NewData = Hg3.Patch(data, repl, b => Sha(b).Substring(0, 16));
+                }
                 else throw new Exception("未知的修補類型 " + type);
             }
             return kif.Build();

@@ -262,6 +262,59 @@ namespace GrisaiaZhTW
         }
     }
 
+    /// <summary>HG-3 影像：只替換指定 frame 的 stdinfo 與 img 標籤內容（其餘位元組原樣保留）。</summary>
+    static class Hg3
+    {
+        class Tag { public byte[] Raw; public byte[] Body; public string Name; }
+        class Frame { public uint Id; public List<Tag> Tags = new List<Tag>(); }
+        public static byte[] Patch(byte[] d, Dictionary<int, byte[][]> repl, Func<byte[], string> sha16)
+        {
+            int hsize = BitConverter.ToInt32(d, 4); var frames = new List<Frame>(); int pos = hsize;
+            while (true)
+            {
+                uint nxt = BitConverter.ToUInt32(d, pos); var fr = new Frame { Id = BitConverter.ToUInt32(d, pos + 4) }; int tp = pos + 8;
+                while (true)
+                {
+                    var raw = new byte[8]; Buffer.BlockCopy(d, tp, raw, 0, 8);
+                    uint tn = BitConverter.ToUInt32(d, tp + 8); int tl = BitConverter.ToInt32(d, tp + 12);
+                    var body = new byte[tl]; Buffer.BlockCopy(d, tp + 16, body, 0, tl);
+                    int z = Array.IndexOf(raw, (byte)0); fr.Tags.Add(new Tag { Raw = raw, Body = body, Name = Encoding.ASCII.GetString(raw, 0, z < 0 ? 8 : z) });
+                    if (tn == 0) break; tp += (int)tn;
+                }
+                frames.Add(fr);
+                if (nxt == 0) break; pos += (int)nxt;
+            }
+            foreach (var kv in repl)
+            {
+                var fr = frames[kv.Key];
+                foreach (var t in fr.Tags)
+                {
+                    if (t.Name == "stdinfo") t.Body = kv.Value[0];
+                    else if (t.Name.StartsWith("img00"))
+                    {
+                        if (sha16(t.Body) != Encoding.ASCII.GetString(kv.Value[2])) throw new Exception("影像 frame 與預期原版不符");
+                        t.Body = kv.Value[1];
+                    }
+                }
+            }
+            var ms = new MemoryStream(); ms.Write(d, 0, hsize);
+            for (int fi = 0; fi < frames.Count; fi++)
+            {
+                var fb = new MemoryStream(); var tags = frames[fi].Tags;
+                for (int ti = 0; ti < tags.Count; ti++)
+                {
+                    fb.Write(tags[ti].Raw, 0, 8);
+                    fb.Write(BitConverter.GetBytes(ti == tags.Count - 1 ? 0 : 16 + tags[ti].Body.Length), 0, 4);
+                    fb.Write(BitConverter.GetBytes(tags[ti].Body.Length), 0, 4);
+                    fb.Write(tags[ti].Body, 0, tags[ti].Body.Length);
+                }
+                ms.Write(BitConverter.GetBytes(fi == frames.Count - 1 ? 0 : 8 + (int)fb.Length), 0, 4);
+                ms.Write(BitConverter.GetBytes(frames[fi].Id), 0, 4); fb.WriteTo(ms);
+            }
+            return ms.ToArray();
+        }
+    }
+
     /// <summary>FES 前端腳本：'FES\0' + 壓縮長 + 原長 + 保留 + zlib 文字。</summary>
     static class Fes
     {

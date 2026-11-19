@@ -153,6 +153,8 @@ if __name__ == '__main__':
             if r is None: continue
             arr, (w, h, bpp, info) = r
             to_png(arr, os.path.join(sys.argv[3], f'{base}#{i:03d}.png'))
+            import json; json.dump({'id': fr['id'], 'w': w, 'h': h, 'bpp': bpp, 'x': info[3], 'y': info[4], 'cw': info[5], 'ch': info[6]},
+                                   open(os.path.join(sys.argv[3], f'{base}#{i:03d}.meta.json'), 'w'))
             print(i, fr['id'], w, h, bpp, 'off', info[3], info[4], 'canvas', info[5], info[6])
     elif cmd == 'enc':
         buf = open(sys.argv[2], 'rb').read(); head, frames = parse(buf)
@@ -160,10 +162,16 @@ if __name__ == '__main__':
         for i, fr in enumerate(frames):
             p = os.path.join(sys.argv[3], f'{base}#{i:03d}.png')
             if not os.path.exists(p): continue
-            info = next(t[1] for t in fr['tags'] if t[0] == 'stdinfo'); w, h, bpp = stdinfo(info)[:3]
-            arr = from_png(p, bpp // 8); assert arr.shape[:2] == (h, w), (p, arr.shape, w, h)
+            ti = next(k for k, t in enumerate(fr['tags']) if t[0] == 'stdinfo'); info = fr['tags'][ti][1]
+            w, h, bpp, ox, oy = stdinfo(info)[:5]
+            arr = from_png(p, bpp // 8); nh, nw = arr.shape[:2]
+            side = p[:-4] + '.json'   # 可選：{"x": 新 offset_x, "y": 新 offset_y}（尺寸改變時用）
+            if os.path.exists(side):
+                import json; j = json.load(open(side)); ox, oy = j.get('x', ox), j.get('y', oy)
+            if (nw, nh, ox, oy) != stdinfo(info)[:2] + stdinfo(info)[3:5]:
+                fr['tags'][ti][1] = struct.pack('<IIIii', nw, nh, bpp, ox, oy) + info[20:]
             for t in fr['tags']:
                 if t[0].startswith('img00'):
                     top, hh = struct.unpack_from('<II', t[1], 0)
-                    t[1] = struct.pack('<II', top, hh) + encode_img(arr, bpp)
+                    t[1] = struct.pack('<II', 0 if nh != h else top, nh) + encode_img(arr, bpp)
         open(sys.argv[4], 'wb').write(build(head, frames)); print('ok')

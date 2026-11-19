@@ -1,0 +1,1 @@
+[{"wait": 5}, {"clicks": 3, "at": [640, 360], "gap": 1.2}, {"wait": 4}, {"close": true}, {"wait": 3}, {"screen": "dialog"}, {"dialog_button": "left"}, {"wait": 4}, {"screen": "after-yes-4s"}, {"shot": "after-yes-win"}, {"wait": 10}, {"screen": "after-yes-14s"}, {"check": "14s"}]

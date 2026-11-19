@@ -1,0 +1,297 @@
+[
+  {
+    "file": "sys_sound",
+    "frame": 0,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整各角色的語音音量。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 1,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整語音音量。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 2,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整音效音量。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 3,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整 BGM 音量。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 4,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定各角色是否播放語音。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 5,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否略過影片。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 6,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否略過語音。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 7,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "選擇系統語音。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 8,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否播放語音。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 9,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否播放音效。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 10,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否播放 BGM。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 11,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "試聽聲音。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 12,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定聲音選項。"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 112,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "瑪麗安",
+    "region": [
+      721,
+      108,
+      815,
+      132
+    ],
+    "text_box": [
+      721,
+      108,
+      815,
+      132
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 112,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "伊莎貝拉",
+    "region": [
+      721,
+      156,
+      820,
+      180
+    ],
+    "text_box": [
+      721,
+      156,
+      820,
+      180
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_sound",
+    "frame": 112,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "其他（男）",
+    "region": [
+      721,
+      548,
+      840,
+      571
+    ],
+    "text_box": [
+      721,
+      548,
+      840,
+      571
+    ],
+    "fill": "sample"
+  }
+]

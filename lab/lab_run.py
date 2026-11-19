@@ -3,7 +3,7 @@ r"""Grisaia Melody zh-TW lab runner (Windows).  只在 lab 副本執行，不碰
 python lab_run.py --run-id R1 --steps steps.json [--payload DIR] [--fresh]
   * lab 遊戲：C:\GameDev\grisaia-melody-lab\game（第一次自動從 Steam 安裝資料夾複製；--fresh 重新複製 .int/.exe）
   * payload：把 DIR 內所有檔案覆蓋進 lab 遊戲（version.dll、zhtw.ini、zhtw_map.bin、*.int …）
-  * steps：[{"wait":秒}, {"shot":"名"}, {"click":[x,y]}, {"key":"RETURN"|"ESCAPE"|"SPACE"|"CONTROL"...}, {"wheel":-1}]
+  * steps：[{"wait":秒}, {"shot":"名"}, {"click":[x,y]}, {"key":"RETURN"|"ESCAPE"|"SPACE"|"CONTROL"...}, {"wheel":-1}, {"move":[x,y]}, {"rclick":[x,y]}]
     座標為遊戲視窗 client 區（1280x720 基準，會依實際 client 大小縮放）
   * 結果：C:\GameDev\grisaia-melody-lab\runs\<run-id>\ （截圖、zhtw_hook.log、report.json）
 """
@@ -79,6 +79,13 @@ def find_window(pids, timeout=60, rep=None):
             if pid not in pids: continue
             r = W.RECT(); user32.GetClientRect(h, ctypes.byref(r))
             if r.right > 500: return h
+            if rep is not None and not rep.get("_dlgshot"):
+                rep["_dlgshot"] = 1
+                try:
+                    from PIL import ImageGrab
+                    r2 = W.RECT(); user32.GetWindowRect(h, ctypes.byref(r2))
+                    ImageGrab.grab(bbox=(r2.left - 10, r2.top - 10, r2.right + 10, r2.bottom + 10), all_screens=True).save(OUT_DIR / "00-display-mode-dialog.png")
+                except Exception as e: rep["events"].append(f"dialog shot failed: {e}")
             if click_rightmost_button(h):
                 if rep is not None: rep["events"].append("display-mode dialog -> right button (windowed)")
                 time.sleep(2)
@@ -98,11 +105,13 @@ def fg(h):
 
 VK = {"RETURN": 0x0D, "ESCAPE": 0x1B, "SPACE": 0x20, "CONTROL": 0x11, "UP": 0x26, "DOWN": 0x28, "LEFT": 0x25, "RIGHT": 0x27, "F1": 0x70}
 
-def click(h, x, y):
+def click(h, x, y, right=False, move_only=False):
     bx, by, bw, bh = client_box(h)
     sx, sy = bx + int(x * bw / 1280), by + int(y * bh / 720)
     user32.SetCursorPos(sx, sy); time.sleep(0.08)
-    user32.mouse_event(2, 0, 0, 0, 0); time.sleep(0.05); user32.mouse_event(4, 0, 0, 0, 0)
+    if move_only: return
+    d, u = (8, 16) if right else (2, 4)
+    user32.mouse_event(d, 0, 0, 0, 0); time.sleep(0.05); user32.mouse_event(u, 0, 0, 0, 0)
 
 def key(name):
     v = VK[name]; user32.keybd_event(v, 0, 0, 0); time.sleep(0.05); user32.keybd_event(v, 0, 2, 0)
@@ -139,6 +148,7 @@ def main():
     global GAME
     if a.steam: GAME = STEAM_GAME
     out = LAB / "runs" / a.run_id; out.mkdir(parents=True, exist_ok=True)
+    global OUT_DIR; OUT_DIR = out
     rep = {"run_id": a.run_id, "events": []}
     if not a.steam: ensure_game(a.fresh)
     bk = GAME / "_zhTW_backup"
@@ -183,12 +193,38 @@ def main():
         if not h: raise RuntimeError("找不到遊戲視窗")
         fg(h); n = 0
         for st in steps:
-            if not user32.IsWindow(h): rep["events"].append("window closed"); break
+            if not user32.IsWindow(h) and "check" not in st and "wait" not in st and "screen" not in st:
+                rep["events"].append("window closed"); break
             if "wait" in st: time.sleep(st["wait"])
             elif "shot" in st:
                 n += 1; p = out / f"{n:02d}-{st['shot']}.png"; fg(h); time.sleep(0.3); shot(h, p); rep["events"].append("shot " + p.name)
             elif "click" in st: fg(h); click(h, *st["click"])
+            elif "rclick" in st: fg(h); click(h, *st["rclick"], right=True)
+            elif "move" in st: fg(h); click(h, *st["move"], move_only=True)
             elif "key" in st: fg(h); key(st["key"])
+            elif "close" in st:
+                user32.PostMessageW(h, 0x0010, 0, 0); rep["events"].append("WM_CLOSE sent")
+            elif "dialog_button" in st:   # 遊戲程序的對話框（非主視窗）按左／右按鈕
+                done = False
+                for hh2, pid2, t2 in windows():
+                    if pid2 in set(lab_pids()) and hh2 != h:
+                        found = []
+                        @ctypes.WINFUNCTYPE(W.BOOL, W.HWND, W.LPARAM)
+                        def cb2(c, l):
+                            cls = ctypes.create_unicode_buffer(64); user32.GetClassNameW(c, cls, 64)
+                            if cls.value.lower() == "button":
+                                r = W.RECT(); user32.GetWindowRect(c, ctypes.byref(r)); found.append((r.left, c))
+                            return True
+                        user32.EnumChildWindows(hh2, cb2, 0)
+                        if len(found) >= 2:
+                            tgt = min(found)[1] if st["dialog_button"] == "left" else max(found)[1]
+                            user32.PostMessageW(tgt, 0x00F5, 0, 0); done = True; break
+                rep["events"].append(f"dialog_button {st['dialog_button']}: {done}")
+            elif "check" in st:
+                rep["events"].append(f"check {st['check']}: alive={bool(lab_pids())} window={bool(user32.IsWindow(h))}")
+            elif "screen" in st:
+                from PIL import ImageGrab
+                n += 1; p = out / f"{n:02d}-{st['screen']}.png"; ImageGrab.grab(all_screens=True).save(p); rep["events"].append("screen " + p.name)
             elif "clicks" in st:
                 for _ in range(st["clicks"]): fg(h); click(h, *st.get("at", [640, 600])); time.sleep(st.get("gap", 1.0))
     except Exception as e:
@@ -200,6 +236,7 @@ def main():
             rep["events"].append(f"kill {p}: {r.returncode} {r.stdout.strip()} {r.stderr.strip()}")
         time.sleep(1)
         if log.exists(): shutil.copy2(log, out / "zhtw_hook.log")
+        rep.pop("_dlgshot", None)
         (out / "report.json").write_text(json.dumps(rep, ensure_ascii=False, indent=2), "utf-8")
         print(json.dumps(rep, ensure_ascii=False, indent=2))
 

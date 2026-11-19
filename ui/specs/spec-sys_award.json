@@ -1,0 +1,389 @@
+[
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 38,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 3,
+    "glow": 2,
+    "align": "center",
+    "zh": "萌系遊戲大賞 2013 開幕!!",
+    "region": [
+      0,
+      0,
+      606,
+      60
+    ],
+    "fill": "transparent",
+    "text_box": [
+      2,
+      0,
+      604,
+      57
+    ],
+    "stroke_color": [
+      7,
+      47,
+      59
+    ],
+    "glow_color": [
+      0,
+      168,
+      130
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "Frontwing 也報名參加，",
+    "region": [
+      70,
+      108,
+      550,
+      125
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      108,
+      550,
+      125
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "・「Pure Girl」",
+    "region": [
+      70,
+      147,
+      550,
+      164
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      147,
+      550,
+      164
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "・「灰色的樂園 ",
+    "region": [
+      70,
+      166,
+      263,
+      184
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      166,
+      263,
+      184
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "以上作品皆已登錄參賽。",
+    "region": [
+      70,
+      205,
+      550,
+      222
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      205,
+      550,
+      222
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "歡迎大家投票支持！",
+    "region": [
+      70,
+      224,
+      550,
+      242
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      224,
+      550,
+      242
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "投票後還有機會獲得贈品，",
+    "region": [
+      70,
+      257,
+      550,
+      274
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      257,
+      550,
+      274
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 18,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "歡迎踴躍參加。",
+    "region": [
+      70,
+      277,
+      550,
+      294
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      277,
+      550,
+      294
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 16,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "※詳情請見下方官方網站。",
+    "region": [
+      70,
+      299,
+      550,
+      314
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      299,
+      550,
+      314
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 16,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "無論使用哪組投票碼，皆可自由選擇投票作品。",
+    "region": [
+      70,
+      354,
+      550,
+      369
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      354,
+      550,
+      369
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 16,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "※請確認問卷明信片上的「投票碼」。",
+    "region": [
+      70,
+      371,
+      550,
+      386
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      371,
+      550,
+      386
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 16,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "Frontwing 使用者網站也正在進行問卷調查，",
+    "region": [
+      70,
+      427,
+      550,
+      443
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      427,
+      550,
+      443
+    ]
+  },
+  {
+    "file": "sys_award",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 16,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "歡迎協助填寫，謝謝。",
+    "region": [
+      70,
+      446,
+      550,
+      462
+    ],
+    "fill": "transparent",
+    "text_box": [
+      73,
+      446,
+      550,
+      462
+    ]
+  }
+]

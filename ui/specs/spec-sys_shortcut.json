@@ -1,0 +1,1148 @@
+[
+  {
+    "file": "sys_shortcut",
+    "frame": 0,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "推進文字",
+    "region": [
+      25,
+      0,
+      167,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      167,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 16,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "推進文字",
+    "region": [
+      23,
+      0,
+      162,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      162,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 1,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "按住時快轉文字",
+    "region": [
+      25,
+      0,
+      375,
+      30
+    ],
+    "text_box": [
+      25,
+      0,
+      375,
+      30
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 17,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "按住時快轉文字",
+    "region": [
+      23,
+      0,
+      370,
+      20
+    ],
+    "text_box": [
+      23,
+      0,
+      370,
+      20
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 2,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "顯示系統選單",
+    "region": [
+      25,
+      0,
+      251,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      251,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 18,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "顯示系統選單",
+    "region": [
+      23,
+      0,
+      246,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      246,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 3,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "快速存檔",
+    "region": [
+      25,
+      0,
+      170,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      170,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 19,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "快速存檔",
+    "region": [
+      23,
+      0,
+      165,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      165,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 4,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "快速讀檔",
+    "region": [
+      25,
+      0,
+      164,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      164,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 20,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "快速讀檔",
+    "region": [
+      23,
+      0,
+      159,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      159,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 5,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "快轉模式",
+    "region": [
+      25,
+      0,
+      183,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      183,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 21,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "快轉模式",
+    "region": [
+      23,
+      0,
+      178,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      178,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 6,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "加快自動模式",
+    "region": [
+      25,
+      0,
+      243,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      243,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 22,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "加快自動模式",
+    "region": [
+      23,
+      0,
+      238,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      238,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 7,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "減慢自動模式",
+    "region": [
+      25,
+      0,
+      243,
+      29
+    ],
+    "text_box": [
+      25,
+      0,
+      243,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 23,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "減慢自動模式",
+    "region": [
+      23,
+      0,
+      238,
+      19
+    ],
+    "text_box": [
+      23,
+      0,
+      238,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 8,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "跳至上一場景",
+    "region": [
+      26,
+      0,
+      225,
+      29
+    ],
+    "text_box": [
+      26,
+      0,
+      225,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 24,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "跳至上一場景",
+    "region": [
+      24,
+      0,
+      220,
+      19
+    ],
+    "text_box": [
+      24,
+      0,
+      220,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 9,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "跳至下一場景",
+    "region": [
+      26,
+      0,
+      225,
+      29
+    ],
+    "text_box": [
+      26,
+      0,
+      225,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 25,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "跳至下一場景",
+    "region": [
+      24,
+      0,
+      220,
+      19
+    ],
+    "text_box": [
+      24,
+      0,
+      220,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 10,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "顯示歷史紀錄",
+    "region": [
+      26,
+      0,
+      177,
+      30
+    ],
+    "text_box": [
+      26,
+      0,
+      177,
+      30
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 26,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "顯示歷史紀錄",
+    "region": [
+      24,
+      0,
+      172,
+      20
+    ],
+    "text_box": [
+      24,
+      0,
+      172,
+      20
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 11,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "確認結束遊戲",
+    "region": [
+      26,
+      0,
+      196,
+      30
+    ],
+    "text_box": [
+      26,
+      0,
+      196,
+      30
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 27,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "確認結束遊戲",
+    "region": [
+      24,
+      0,
+      191,
+      20
+    ],
+    "text_box": [
+      24,
+      0,
+      191,
+      20
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 12,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "切換視窗／全螢幕",
+    "region": [
+      26,
+      0,
+      326,
+      29
+    ],
+    "text_box": [
+      26,
+      0,
+      326,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 28,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "切換視窗／全螢幕",
+    "region": [
+      24,
+      0,
+      321,
+      19
+    ],
+    "text_box": [
+      24,
+      0,
+      321,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 13,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "最小化視窗",
+    "region": [
+      26,
+      0,
+      182,
+      29
+    ],
+    "text_box": [
+      26,
+      0,
+      182,
+      29
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 29,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "最小化視窗",
+    "region": [
+      24,
+      0,
+      177,
+      19
+    ],
+    "text_box": [
+      24,
+      0,
+      177,
+      19
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 14,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "移至選項或按鈕",
+    "region": [
+      26,
+      0,
+      309,
+      31
+    ],
+    "text_box": [
+      26,
+      0,
+      309,
+      31
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 30,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "移至選項或按鈕",
+    "region": [
+      24,
+      0,
+      304,
+      21
+    ],
+    "text_box": [
+      24,
+      0,
+      304,
+      21
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 15,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 2,
+    "align": "left",
+    "zh": "隱藏訊息視窗",
+    "region": [
+      26,
+      0,
+      272,
+      30
+    ],
+    "text_box": [
+      26,
+      0,
+      272,
+      30
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 31,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "隱藏訊息視窗",
+    "region": [
+      24,
+      0,
+      267,
+      20
+    ],
+    "text_box": [
+      24,
+      0,
+      267,
+      20
+    ],
+    "fill": "transparent",
+    "glow_color": [
+      120,
+      209,
+      255
+    ]
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 73,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 10,
+    "color": [
+      150,
+      150,
+      150
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "半形",
+    "region": [
+      247,
+      153,
+      277,
+      166
+    ],
+    "text_box": [
+      247,
+      153,
+      277,
+      166
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_shortcut",
+    "frame": 73,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 10,
+    "color": [
+      150,
+      150,
+      150
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "全形",
+    "region": [
+      268,
+      183,
+      295,
+      195
+    ],
+    "text_box": [
+      268,
+      183,
+      295,
+      195
+    ],
+    "fill": "sample"
+  }
+]

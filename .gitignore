@@ -20,3 +20,6 @@
 !lab/*.json
 hook/build/
 **/__pycache__/
+!ui/specs/*.json
+!ui/specs/*.py
+!translation/lang/*.json

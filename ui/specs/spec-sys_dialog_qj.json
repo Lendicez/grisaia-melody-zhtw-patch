@@ -1,0 +1,257 @@
+[
+  {
+    "file": "sys_dialog_qj",
+    "frame": 0,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "keep_left": 22,
+    "zh": "下次不再確認"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 1,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "keep_left": 24,
+    "zh": "下次不再確認"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 8,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要結束遊戲嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 9,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要覆蓋這筆存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 10,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要讀取這筆存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 11,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要刪除這筆存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 12,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要刪除所有存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 13,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "真的要刪除所有存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 14,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要回到標題畫面嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 15,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要快速存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 16,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要快速讀檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 17,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要移動這筆存檔嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 18,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要跳到上一場景開頭嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 19,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要跳到下一場景開頭嗎？"
+  },
+  {
+    "file": "sys_dialog_qj",
+    "frame": 20,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 30,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "keep_left": 0,
+    "zh": "要回到場景選擇畫面嗎？"
+  }
+]

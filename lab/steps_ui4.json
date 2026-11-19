@@ -1,0 +1,9 @@
+[{"clicks": 6, "at": [640, 360], "gap": 1.2}, {"wait": 6},
+ {"click": [642, 518]}, {"wait": 6},
+ {"move": [750, 460]}, {"wait": 1}, {"click": [750, 460]}, {"wait": 6}, {"shot": "system"},
+ {"rclick": [640, 360]}, {"wait": 5},
+ {"move": [750, 290]}, {"wait": 1}, {"click": [750, 290]}, {"wait": 6}, {"shot": "sound"},
+ {"rclick": [640, 360]}, {"wait": 5},
+ {"move": [530, 290]}, {"wait": 1}, {"click": [530, 290]}, {"wait": 6}, {"shot": "load"},
+ {"rclick": [640, 360]}, {"wait": 5},
+ {"move": [530, 470]}, {"wait": 1}, {"click": [530, 470]}, {"wait": 6}, {"shot": "shortcut"}]

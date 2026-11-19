@@ -24,6 +24,10 @@ static int g_font_override = 1;
 static int g_charset_override = 1;
 static int g_font_scale = 100;       // 字高百分比
 static char g_font_face[LF_FACESIZE] = "Microsoft JhengHei";
+// 正黑體的「…」「─」等為窄字，引擎以全形格排列會斷開 → 這些符號改用全形字型（依序找第一個存在的）
+static wchar_t g_punct_chars[64] = L"\x2026\x22EF\x2500\x2015\x2014\x2025\x2501";
+static wchar_t g_punct_faces[256] = L"MingLiU;PMingLiU;Yu Gothic;MS Gothic";
+static wchar_t g_punct_face[LF_FACESIZE];   // 實際使用者（空字串＝不用）
 static CRITICAL_SECTION g_cs;
 static FILE *g_log;
 static int g_map_count = 0;
@@ -49,9 +53,19 @@ static void loghex(const char *tag, const void *p, int n) {
     logf("  %s[%d] %s\n", tag, n, buf);
 }
 
+static DWORD_PTR g_conf_lo, g_conf_hi;
+static int in_module(DWORD_PTR r, const char *name, DWORD_PTR *lo, DWORD_PTR *hi) {
+    if (!*lo) {
+        HMODULE m = GetModuleHandleA(name);
+        if (!m) return 0;
+        IMAGE_NT_HEADERS *nt = (IMAGE_NT_HEADERS *)((BYTE *)m + ((IMAGE_DOS_HEADER *)m)->e_lfanew);
+        *lo = (DWORD_PTR)m; *hi = *lo + nt->OptionalHeader.SizeOfImage;
+    }
+    return r >= *lo && r < *hi;
+}
 static int from_exe(void *ret) {
     DWORD_PTR r = (DWORD_PTR)ret;
-    return r >= g_exe_lo && r < g_exe_hi;
+    return (r >= g_exe_lo && r < g_exe_hi) || in_module(r, "cs2conf.dll", &g_conf_lo, &g_conf_hi);
 }
 
 static void load_config(void) {
@@ -66,6 +80,11 @@ static void load_config(void) {
     wchar_t face[LF_FACESIZE];
     if (GetPrivateProfileStringW(L"font", L"face", L"", face, LF_FACESIZE, ini) > 0)
         WideCharToMultiByte(CP_ACP, 0, face, -1, g_font_face, LF_FACESIZE, NULL, NULL);
+    GetPrivateProfileStringW(L"font", L"punct_faces", g_punct_faces, g_punct_faces, 256, ini);
+    {
+        wchar_t pc[64];
+        if (GetPrivateProfileStringW(L"font", L"punct_chars", L"", pc, 64, ini) > 0) wcscpy(g_punct_chars, pc);
+    }
     if (g_log_enable) {
         wchar_t lp[MAX_PATH];
         swprintf(lp, MAX_PATH, L"%ls\\zhtw_hook.log", g_dir);
@@ -153,11 +172,50 @@ static int WINAPI h_WCTMB(UINT cp, DWORD flags, LPCWCH src, int srclen, LPSTR ds
     return r;
 }
 
+static int CALLBACK font_exists_cb(const LOGFONTW *lf, const TEXTMETRICW *tm, DWORD t, LPARAM p) { *(int *)p = 1; return 0; }
+static void pick_punct_face(void) {
+    HDC dc = GetDC(NULL); wchar_t list[256]; wcscpy(list, g_punct_faces);
+    wchar_t *ctx = NULL;
+    for (wchar_t *tok = wcstok(list, L";", &ctx); tok; tok = wcstok(NULL, L";", &ctx)) {
+        while (*tok == L' ') tok++;
+        LOGFONTW lf; memset(&lf, 0, sizeof lf); lf.lfCharSet = DEFAULT_CHARSET; wcsncpy(lf.lfFaceName, tok, LF_FACESIZE - 1);
+        int found = 0; EnumFontFamiliesExW(dc, &lf, (FONTENUMPROCW)font_exists_cb, (LPARAM)&found, 0);
+        if (found) { wcsncpy(g_punct_face, tok, LF_FACESIZE - 1); break; }
+    }
+    ReleaseDC(NULL, dc);
+}
+typedef struct { LONG h; LONG w; LONG weight; HFONT f; } AltFont;
+static AltFont g_alt[16]; static int g_alt_n = 0;
+static HFONT alt_font_for(HDC hdc) {
+    HFONT cur = (HFONT)GetCurrentObject(hdc, OBJ_FONT); LOGFONTW lf;
+    if (!cur || !GetObjectW(cur, sizeof lf, &lf)) return NULL;
+    for (int i = 0; i < g_alt_n; i++) if (g_alt[i].h == lf.lfHeight && g_alt[i].w == lf.lfWidth && g_alt[i].weight == lf.lfWeight) return g_alt[i].f;
+    wcsncpy(lf.lfFaceName, g_punct_face, LF_FACESIZE - 1); lf.lfCharSet = DEFAULT_CHARSET;
+    HFONT f = CreateFontIndirectW(&lf);
+    if (f && g_alt_n < 16) { g_alt[g_alt_n].h = lf.lfHeight; g_alt[g_alt_n].w = lf.lfWidth; g_alt[g_alt_n].weight = lf.lfWeight; g_alt[g_alt_n].f = f; g_alt_n++; }
+    return f;
+}
+static int g_punct_picked = 0;
+static int is_punct(WCHAR w) {
+    if (!w || !wcschr(g_punct_chars, w)) return 0;
+    if (!g_punct_picked) { g_punct_picked = 1; pick_punct_face(); logf("punct face='%ls'\n", g_punct_face); }   // 延後到第一次繪字（避免在 DllMain 呼叫 GDI）
+    return g_punct_face[0] != 0;
+}
+
 static DWORD WINAPI h_GGOA(HDC hdc, UINT ch, UINT fmt, LPGLYPHMETRICS gm, DWORD cb, LPVOID buf, const MAT2 *m) {
     void *ret = __builtin_return_address(0);
     if (!from_exe(ret)) return o_GGOA(hdc, ch, fmt, gm, cb, buf, m);
     WCHAR w = sjis_to_uni(ch);
     static int once = 0; if (once < 40 && ch > 0x7F) { once++; logf("GGOA ch=%04X -> U+%04X fmt=%u ret=%p\n", ch, w, fmt, ret); }
+    if (is_punct(w)) {
+        HFONT af = alt_font_for(hdc);
+        if (af) {
+            HGDIOBJ old = SelectObject(hdc, af);
+            DWORD r = o_GGOW(hdc, w, fmt, gm, cb, buf, m);
+            SelectObject(hdc, old);
+            return r;
+        }
+    }
     return o_GGOW(hdc, w, fmt, gm, cb, buf, m);
 }
 
@@ -201,6 +259,66 @@ static BOOL WINAPI h_GTMA(HDC hdc, LPTEXTMETRICA tm) {
     return r;
 }
 
+// ---------------------------------------------------------------- Win32 UI 文字（language.txt 經引擎轉成 CP932＋隧道碼後以 A 版 API 顯示）
+typedef int (WINAPI *MBA_t)(HWND, LPCSTR, LPCSTR, UINT);
+typedef int (WINAPI *MBW_t)(HWND, LPCWSTR, LPCWSTR, UINT);
+typedef BOOL (WINAPI *SWTA_t)(HWND, LPCSTR);
+typedef BOOL (WINAPI *SDITA_t)(HWND, int, LPCSTR);
+typedef LRESULT (WINAPI *SMA_t)(HWND, UINT, WPARAM, LPARAM);
+static MBA_t o_MBA; static SWTA_t o_SWTA; static SDITA_t o_SDITA; static SMA_t o_SMA;
+
+static int has_high(LPCSTR s) { if (!s || IS_INTRESOURCE(s)) return 0; for (; *s; s++) if ((unsigned char)*s >= 0x80) return 1; return 0; }
+// 視窗標題等內建字串的作品名（不改 startup.xml 的 title，以免存檔資料夾路徑改變）
+static const WCHAR *g_repl[][2] = {
+    { L"\x30B0\x30EA\x30B6\x30A4\x30A2\x306E\x8FF7\x5BAE", L"\x7070\x8272\x7684\x8FF7\x5BAE" },   /* グリザイアの迷宮 → 灰色的迷宮 */
+    { L"\x30B0\x30EA\x30B6\x30A4\x30A2\x306E\x65CB\x5F8B", L"\x7070\x8272\x7684\x65CB\x5F8B" },   /* グリザイアの旋律 → 灰色的旋律 */
+    { L"\x30D5\x30ED\x30F3\x30C8\x30A6\x30A4\x30F3\x30B0", L"Frontwing" },                               /* フロントウイング */
+};
+static void apply_repl(WCHAR *w) {
+    for (size_t k = 0; k < sizeof g_repl / sizeof g_repl[0]; k++) {
+        size_t la = wcslen(g_repl[k][0]), lb = wcslen(g_repl[k][1]);   // lb <= la
+        WCHAR *p;
+        while ((p = wcsstr(w, g_repl[k][0])) != NULL) { memcpy(p, g_repl[k][1], lb * sizeof(WCHAR)); memmove(p + lb, p + la, (wcslen(p + la) + 1) * sizeof(WCHAR)); }
+    }
+}
+static WCHAR *dup932(LPCSTR s) {
+    int n = decode932(0, s, -1, NULL, 0); if (n <= 0) return NULL;
+    WCHAR *w = (WCHAR *)HeapAlloc(GetProcessHeap(), 0, (n + 1) * sizeof(WCHAR));
+    decode932(0, s, -1, w, n); w[n] = 0; apply_repl(w); return w;
+}
+static void freew(WCHAR *w) { if (w) HeapFree(GetProcessHeap(), 0, w); }
+
+static int WINAPI h_MBA(HWND h, LPCSTR text, LPCSTR cap, UINT t) {
+    if (!from_exe(__builtin_return_address(0))) return o_MBA(h, text, cap, t);
+    WCHAR *wt = dup932(text), *wc = dup932(cap);
+    logf("MessageBoxA\n"); loghex("text", text, -1);
+    int r = MessageBoxW(h, wt ? wt : L"", wc ? wc : NULL, t);
+    freew(wt); freew(wc); return r;
+}
+static BOOL WINAPI h_SWTA(HWND h, LPCSTR s) {
+    if (!from_exe(__builtin_return_address(0)) || !has_high(s)) return o_SWTA(h, s);
+    WCHAR *w = dup932(s); BOOL r = SetWindowTextW(h, w ? w : L""); freew(w); return r;
+}
+static BOOL WINAPI h_SDITA(HWND h, int id, LPCSTR s) {
+    if (!from_exe(__builtin_return_address(0)) || !has_high(s)) return o_SDITA(h, id, s);
+    WCHAR *w = dup932(s); BOOL r = SetDlgItemTextW(h, id, w ? w : L""); freew(w); return r;
+}
+static LRESULT WINAPI h_SMA(HWND h, UINT msg, WPARAM wp, LPARAM lp) {
+    if ((msg == WM_SETTEXT || msg == CB_ADDSTRING || msg == LB_ADDSTRING || msg == CB_INSERTSTRING || msg == LB_INSERTSTRING)
+        && from_exe(__builtin_return_address(0)) && has_high((LPCSTR)lp)) {
+        WCHAR *w = dup932((LPCSTR)lp); LRESULT r = SendMessageW(h, msg, wp, (LPARAM)w); freew(w); return r;
+    }
+    return o_SMA(h, msg, wp, lp);
+}
+
+typedef HWND (WINAPI *CWEA_t)(DWORD, LPCSTR, LPCSTR, DWORD, int, int, int, int, HWND, HMENU, HINSTANCE, LPVOID);
+static CWEA_t o_CWEA;
+static HWND WINAPI h_CWEA(DWORD ex, LPCSTR cls, LPCSTR name, DWORD st, int x, int y, int w, int h, HWND p, HMENU m, HINSTANCE i, LPVOID lp) {
+    HWND r = o_CWEA(ex, cls, name, st, x, y, w, h, p, m, i, lp);
+    if (r && has_high(name) && from_exe(__builtin_return_address(0))) { WCHAR *t = dup932(name); if (t) { SetWindowTextW(r, t); freew(t); } }
+    return r;
+}
+
 static void hook(const char *mod, const char *name, void *det, void **orig) {
     HMODULE m = GetModuleHandleA(mod); if (!m) m = LoadLibraryA(mod);
     void *p = m ? (void *)GetProcAddress(m, name) : NULL;
@@ -228,6 +346,11 @@ static void install(void) {
     hook("gdi32.dll", "GetTextExtentPoint32A", (void *)h_GTEPA, (void **)&o_GTEPA);
     hook("gdi32.dll", "CreateFontIndirectA", (void *)h_CFIA, (void **)&o_CFIA);
     hook("gdi32.dll", "GetTextMetricsA", (void *)h_GTMA, (void **)&o_GTMA);
+    hook("user32.dll", "CreateWindowExA", (void *)h_CWEA, (void **)&o_CWEA);
+    hook("user32.dll", "MessageBoxA", (void *)h_MBA, (void **)&o_MBA);
+    hook("user32.dll", "SetWindowTextA", (void *)h_SWTA, (void **)&o_SWTA);
+    hook("user32.dll", "SetDlgItemTextA", (void *)h_SDITA, (void **)&o_SDITA);
+    hook("user32.dll", "SendMessageA", (void *)h_SMA, (void **)&o_SMA);
     if (!o_GGOW) o_GGOW = (GGOW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetGlyphOutlineW");
     o_GTEPW = (GTEPW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetTextExtentPoint32W");
 }

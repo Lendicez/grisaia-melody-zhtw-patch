@@ -1,0 +1,290 @@
+{
+ "font": "msjhbd.ttc",
+ "probe": "怎麼大家",
+ "groups": [
+  [
+   {
+    "name": "sys_scene#028",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#029",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#030",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#031",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 5,
+     "white_bg": true
+    },
+    "size": 22,
+    "glow": [
+     3,
+     2.4
+    ],
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#032",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#033",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#034",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#035",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#036",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#037",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#038",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 2,
+     "white_bg": true
+    },
+    "size": 22,
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  [
+   {
+    "name": "sys_scene#039",
+    "zh": "「怎麼大家都梳飛機頭啦w」",
+    "region": [
+     14,
+     3,
+     341,
+     42
+    ],
+    "opt": {
+     "abs": 200,
+     "dilate": 5,
+     "white_bg": true
+    },
+    "size": 22,
+    "glow": [
+     3,
+     2.4
+    ],
+    "color": [
+     0,
+     0,
+     0
+    ]
+   }
+  ]
+ ]
+}

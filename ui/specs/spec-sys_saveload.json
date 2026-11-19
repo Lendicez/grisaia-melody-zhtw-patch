@@ -1,0 +1,146 @@
+[
+  {
+    "file": "sys_saveload",
+    "frame": 8,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "刪除所有存檔。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 9,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "刪除這筆存檔。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 10,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "讀取這筆存檔。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 11,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "儲存至此欄位。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 12,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "切換至自動存檔頁。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 13,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "切換至快速讀檔頁。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 14,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "切換存檔頁面。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 15,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "繼續已儲存的遊戲。"
+  },
+  {
+    "file": "sys_saveload",
+    "frame": 16,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "儲存目前遊戲進度。"
+  }
+]

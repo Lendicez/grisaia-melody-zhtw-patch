@@ -1,0 +1,8 @@
+[{"clicks": 6, "at": [640, 360], "gap": 1.2}, {"wait": 6}, {"shot": "title"},
+ {"click": [642, 556]}, {"wait": 5}, {"shot": "cg"},
+ {"rclick": [640, 360]}, {"wait": 4}, {"shot": "cg-back"},
+ {"click": [642, 518]}, {"wait": 5}, {"shot": "menu"},
+ {"click": [970, 290]}, {"wait": 6}, {"shot": "text"},
+ {"rclick": [640, 360]}, {"wait": 4}, {"shot": "text-back"},
+ {"click": [750, 470]}, {"wait": 6}, {"shot": "system"},
+ {"rclick": [640, 360]}, {"wait": 4}, {"shot": "system-back"}]

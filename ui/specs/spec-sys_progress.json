@@ -1,0 +1,147 @@
+[
+  {
+    "file": "sys_progress",
+    "frame": 48,
+    "font": "msjhl.ttc",
+    "index": 0,
+    "size": 24,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "迪布 H",
+    "region": [
+      72,
+      206,
+      157,
+      229
+    ],
+    "text_box": [
+      72,
+      206,
+      157,
+      229
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_progress",
+    "frame": 91,
+    "font": "msjhl.ttc",
+    "index": 0,
+    "size": 24,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "樂園後日談",
+    "region": [
+      47,
+      207,
+      181,
+      230
+    ],
+    "text_box": [
+      47,
+      207,
+      181,
+      230
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_progress",
+    "frame": 134,
+    "font": "msjhl.ttc",
+    "index": 0,
+    "size": 24,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "布蘭艾爾之種",
+    "region": [
+      33,
+      207,
+      196,
+      229
+    ],
+    "text_box": [
+      33,
+      207,
+      196,
+      229
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_progress",
+    "frame": 177,
+    "font": "msjhl.ttc",
+    "index": 0,
+    "size": 24,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "序章",
+    "region": [
+      59,
+      207,
+      170,
+      229
+    ],
+    "text_box": [
+      59,
+      207,
+      170,
+      229
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_progress",
+    "frame": 220,
+    "font": "msjhl.ttc",
+    "index": 0,
+    "size": 24,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "布蘭艾爾之種",
+    "region": [
+      33,
+      207,
+      196,
+      229
+    ],
+    "text_box": [
+      33,
+      207,
+      196,
+      229
+    ],
+    "fill": "sample"
+  }
+]

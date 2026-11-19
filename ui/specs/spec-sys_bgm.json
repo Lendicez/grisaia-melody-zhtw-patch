@@ -1,0 +1,872 @@
+[
+  {
+    "file": "sys_bgm",
+    "frame": 18,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 19,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 20,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 21,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 22,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 23,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 24,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 25,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 26,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 27,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 28,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 29,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 30,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 31,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 32,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 33,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 34,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 35,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 36,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 37,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 38,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 39,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 40,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 41,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 42,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 43,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 44,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 45,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 46,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  },
+  {
+    "file": "sys_bgm",
+    "frame": 47,
+    "font": "mingliu.ttc",
+    "index": 0,
+    "size": 21,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "center",
+    "zh": "未命名曲",
+    "region": [
+      65,
+      3,
+      145,
+      29
+    ],
+    "text_box": [
+      67,
+      3,
+      144,
+      29
+    ],
+    "fill": "sample"
+  }
+]

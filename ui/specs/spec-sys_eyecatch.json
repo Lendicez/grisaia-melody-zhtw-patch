@@ -1,0 +1,1074 @@
+[
+  {
+    "file": "sys_eyecatch",
+    "frame": 25,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "灰色島"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 26,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東松濱站"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 27,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "潛水艇・伊號"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 28,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "「赤坂」"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 29,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "太平洋・海上"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 30,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "塔爾塔羅斯島"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 31,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "山中"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 32,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東京都・八王子"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 33,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "沖繩縣"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 34,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東京都・豐島區"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 35,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "屋形船"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 36,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・滿的房間"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 37,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・由美子的房間"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 38,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "沿海道路"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 39,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "加州・聖地牙哥"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 40,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "千葉縣・習志野"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 41,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "日本海・海上"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 42,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "婚禮會場"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 43,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東京都・台東區近郊"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 44,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "北海道"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 45,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "溫哥華國際機場"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 46,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "艦內・休息室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 47,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "海軍兵科訓練學校"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 48,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "群馬縣・某處"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 49,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "神奈川縣・風見家"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 50,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "維吉尼亞州・蘭利"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 51,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "神奈川縣・東濱動物園內"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 52,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東京都・周防家本宅"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 53,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "西伊豆・溫泉街"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 54,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "三嶋崎近郊・商店街"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 55,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東京都・遊樂場"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 56,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "三嶋崎近郊・商店街"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 57,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "婚禮會場・休息室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 58,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "婚禮會場・大廳"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 59,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "神奈川縣某處・山中小屋"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 60,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・幸的房間"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 61,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "高地"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 62,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "新潟縣・某處"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 64,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "愛麗絲環球公司社長室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 65,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東京都・某處"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 66,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・蒔菜的房間"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 67,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "三嶋崎警署"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 68,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・天音的房間"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 69,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "神奈川縣・某處"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 70,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "河堤"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 71,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "病房"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 72,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "醫院"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 73,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "公寓"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 74,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "東濱社長室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 75,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "「市谷」"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 76,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "三嶋崎警署・偵訊室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 77,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "三嶋崎・中央商店街"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 78,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "三嶋崎・站前街"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 79,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・洗衣房"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 80,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・大浴場"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 81,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・頂樓"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 82,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・走廊"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 83,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・大廳"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 84,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍・雄二的房間"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 85,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "學園宿舍"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 86,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園・中庭"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 87,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園・校長室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 88,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園・正門前"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 89,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園・操場"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 90,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園・走廊"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 91,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園・教室"
+  },
+  {
+    "file": "sys_eyecatch",
+    "frame": 92,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 27,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "美濱學園"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "file": "sys_log",
+    "frame": 26,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "點選即可播放語音。"
+  },
+  {
+    "file": "sys_log",
+    "frame": 27,
+    "font": "msjh.ttc",
+    "index": 0,
+    "size": 20,
+    "color": [
+      255,
+      255,
+      255
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "顯示已讀文字。"
+  }
+]

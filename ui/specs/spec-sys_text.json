@@ -1,0 +1,178 @@
+[
+  {
+    "file": "sys_text",
+    "frame": 17,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "切換全螢幕與視窗模式。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 18,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定存檔後是否自動回到遊戲畫面。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 19,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否允許修改存檔註記。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 20,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否變更已讀文字顏色。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 21,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定是否允許快轉未讀文字。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 22,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定遇到選項時是否停止快轉。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 23,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整訊息視窗的不透明度。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 24,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整自動模式速度。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 25,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整快轉速度。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 26,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "調整文字速度。"
+  },
+  {
+    "file": "sys_text",
+    "frame": 27,
+    "font": "msjhbd.ttc",
+    "index": 0,
+    "size": 19,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "stroke": 0,
+    "glow": 0,
+    "align": "left",
+    "zh": "設定文字速度、訊息視窗不透明度等選項。"
+  }
+]
