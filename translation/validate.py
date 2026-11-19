@@ -26,11 +26,12 @@ def check(path):
     except Exception as e:
         return [f'{path}: 不是合法 UTF-8 JSON：{e}']
     src = load_in(path)
-    if [o.get('id') for o in out] != [s['id'] for s in src]:
+    sd = {s['id']: s for s in src}
+    if os.path.basename(path).startswith('fix-'):
+        unknown = [o.get('id') for o in out if o.get('id') not in sd]
+        if unknown: errs.append(f'{path}: 有不屬於 in 檔的 id：{unknown[:5]}')
+    elif [o.get('id') for o in out] != [s['id'] for s in src]:
         errs.append(f'{path}: id 列表與 in 檔不一致（數量 {len(out)} vs {len(src)}，順序須相同）')
-        sd = {s['id']: s for s in src}
-    else:
-        sd = {s['id']: s for s in src}
     for o in out:
         i, zh = o.get('id'), o.get('zh')
         s = sd.get(i)
