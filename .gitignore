@@ -1,0 +1,22 @@
+# 白名單：預設全部忽略，只收原始碼與譯文
+*
+!*/
+!.gitignore
+!README.md
+!NOTICE.md
+!AGENTS.md
+!docs/*.md
+!tools/*.py
+!hook/*.c
+!hook/*.def
+!hook/build.py
+!hook/third_party/minhook/**
+!installer/*.cs
+!translation/*.md
+!translation/*.json
+!translation/*.py
+!translation/zh/*.json
+!lab/*.py
+!lab/*.json
+hook/build/
+**/__pycache__/

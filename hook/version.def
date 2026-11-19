@@ -1,0 +1,19 @@
+LIBRARY version
+EXPORTS
+    GetFileVersionInfoA=px_GetFileVersionInfoA@16
+    GetFileVersionInfoW=px_GetFileVersionInfoW@16
+    GetFileVersionInfoExA=px_GetFileVersionInfoExA@20
+    GetFileVersionInfoExW=px_GetFileVersionInfoExW@20
+    GetFileVersionInfoSizeA=px_GetFileVersionInfoSizeA@8
+    GetFileVersionInfoSizeW=px_GetFileVersionInfoSizeW@8
+    GetFileVersionInfoSizeExA=px_GetFileVersionInfoSizeExA@12
+    GetFileVersionInfoSizeExW=px_GetFileVersionInfoSizeExW@12
+    GetFileVersionInfoByHandle=px_GetFileVersionInfoByHandle@16
+    VerFindFileA=px_VerFindFileA@32
+    VerFindFileW=px_VerFindFileW@32
+    VerInstallFileA=px_VerInstallFileA@32
+    VerInstallFileW=px_VerInstallFileW@32
+    VerLanguageNameA=px_VerLanguageNameA@12
+    VerLanguageNameW=px_VerLanguageNameW@12
+    VerQueryValueA=px_VerQueryValueA@16
+    VerQueryValueW=px_VerQueryValueW@16
