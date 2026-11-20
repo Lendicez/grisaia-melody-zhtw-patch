@@ -1,6 +1,6 @@
 # 交接（2026-11-19 起，Claude 主導）
 
-## 目前狀態（2026-11-19 19:00）
+## 目前狀態（2026-11-20）
 
 | 項目 | 狀態 |
 |---|---|
@@ -9,17 +9,25 @@
 | exe 字串表 | **完成**：`language.txt` 903 條（`translation/lang/lang-out-*.json`），以 CP932＋借位碼寫出 |
 | 顯示 hook | 完成並實機確認：對話（微軟正黑體）、名字欄、換行、刪節號／破折號（細明體）、借位字、對話框標題與按鈕 |
 | UI 圖片 | **完成**：標題選單、設定各頁、存讀檔、CG／BGM／影片／場景鑑賞說明、對話設定、進度、跳轉中、場景標題、開機注意畫面（caution1/2） |
-| 安裝程式 | **RC1 完成**：`<lab>\release-rc1\GrisaiaMelody-zhTW-Patch-0.9.0.exe`（約 9 MB）；自我測試通過（含 image.int 逐檔比對、重複安裝、解除安裝還原） |
+| 安裝程式 | **RC2**：`<lab>\release-rc2\GrisaiaMelody-zhTW-Patch-0.9.1.exe`（含存檔路徑修正）；自我測試通過。RC1（0.9.0）擁有者已實機確認安裝／解除安裝 |
 | GitHub | `Lendicez/grisaia-melody-zhtw-patch`（私人） |
 
 實機確認（payload-r8，2026-11-19）：開機注意畫面、標題選單、設定 Text／Dialog 頁、CG 鑑賞說明、結束確認對話框皆為繁中且無破圖。
 
+## 結束時卡住（已解決，2026-11-20）
+- 原因：存檔資料夾是 `%APPDATA%\フロントウイング\グリザイアの迷宮 ～グリザイアの旋律～`，引擎以 Shift-JIS 位元組呼叫
+  `CreateDirectoryA`／`CreateFileA`；在非日文系統（CP950）會被當成系統代碼頁解讀而失敗，結束時寫系統存檔失敗並跳出
+  「セーブデータの作成に失敗しました」訊息框，看起來像卡住。原版在中文系統同樣如此（等於中文系統原本完全無法存檔）。
+- 修正：`hook/zhtw_fs.c` 把含高位元組的路徑轉成 Unicode 改呼叫 W 版 API（系統前綴照系統代碼頁、其餘照 CP932），
+  路徑與日文系統／Locale Emulator／Steam Cloud 的資料夾名稱一致。`zhtw.ini` 的 `[fs] enable=0` 可關閉。
+- 診斷工具：`hook/zhtw_diag.c`（`[diag] exit=1`）記錄結束流程並在結束後傾印各執行緒堆疊；`[diag] fast_exit=1` 可在 ExitProcess 時直接結束程序（目前不需要）。
+- 驗證：diag-hang2（除錯版）與 rc2-exit（正式設定）按「是」後 4 秒內程序正常結束；存檔資料夾已寫入 savegen.dat、setup.xml。
+
 ## 已知問題
-- **按「結束遊戲」後視窗卡住**：未安裝補丁的原版也一樣（gm-0049／gm-0050 驗證），非補丁造成。
 - 自動測試時，選單的點擊偶爾只變成滑鼠停留（未進入頁面）；手動操作無此問題，System／Sound／Shortcut 頁以離線比對圖確認。
 
 ## 下一步
-1. 擁有者在真正的 Steam 資料夾執行 RC1 安裝程式（bridge 不允許執行白名單外的 exe，需手動），經 Steam 啟動確認，再用同一個 EXE 解除安裝確認還原。
+1. 擁有者以 RC2 安裝（會覆蓋 RC1），確認：按結束遊戲能正常關閉、遊戲內存檔／讀檔正常（bridge 不允許執行白名單外的 exe，需手動）。
 2. 擁有者實機通玩抽查（長訊息、backlog、存讀檔註記）後發行。
 3. RC1 的 payload 由 `build_patch.py … --lang <lab>\tx-lang --ui <lab>\ui\out --payload <lab>\reports\payload-rc1.json --version 0.9.0 --ini <lab>\reports\zhtw-release.ini` 產生（release ini 關閉 log）。
 4. `lab_run.py --payload` 結束後**不會**自動還原；測完用 `lab/restore_steam.py` 還原（會與 `pristine-ja` 比對）。

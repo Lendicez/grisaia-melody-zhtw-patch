@@ -22,6 +22,8 @@ static int g_log_enable = 0, g_log_max = 4000, g_log_count = 0;
 static int g_remap_acp = 1;          // 主程式以 CP_ACP 呼叫時也視為 932
 static int g_font_override = 1;
 static int g_charset_override = 1;
+static int g_diag_exit = 0, g_fast_exit = 0;   // [diag] 結束流程診斷／快速結束
+static int g_fs_enable = 1;                   // [fs] 非 ASCII 路徑改走 W 版 API（存檔資料夾）
 static int g_font_scale = 100;       // 字高百分比
 static char g_font_face[LF_FACESIZE] = "Microsoft JhengHei";
 // 正黑體的「…」「─」等為窄字，引擎以全形格排列會斷開 → 這些符號改用全形字型（依序找第一個存在的）
@@ -77,6 +79,9 @@ static void load_config(void) {
     g_font_override = GetPrivateProfileIntW(L"font", L"override", 1, ini);
     g_charset_override = GetPrivateProfileIntW(L"font", L"charset_override", 1, ini);
     g_font_scale = GetPrivateProfileIntW(L"font", L"scale", 100, ini);
+    g_diag_exit = GetPrivateProfileIntW(L"diag", L"exit", 0, ini);
+    g_fast_exit = GetPrivateProfileIntW(L"diag", L"fast_exit", 0, ini);
+    g_fs_enable = GetPrivateProfileIntW(L"fs", L"enable", 1, ini);
     wchar_t face[LF_FACESIZE];
     if (GetPrivateProfileStringW(L"font", L"face", L"", face, LF_FACESIZE, ini) > 0)
         WideCharToMultiByte(CP_ACP, 0, face, -1, g_font_face, LF_FACESIZE, NULL, NULL);
@@ -328,6 +333,9 @@ static void hook(const char *mod, const char *name, void *det, void **orig) {
     logf("hook %s!%s at %p: %d %d\n", mod, name, p, s1, s2);
 }
 
+#include "zhtw_diag.c"
+#include "zhtw_fs.c"
+
 static void install(void) {
     g_exe = GetModuleHandleW(NULL);
     IMAGE_DOS_HEADER *dos = (IMAGE_DOS_HEADER *)g_exe;
@@ -353,6 +361,8 @@ static void install(void) {
     hook("user32.dll", "SendMessageA", (void *)h_SMA, (void **)&o_SMA);
     if (!o_GGOW) o_GGOW = (GGOW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetGlyphOutlineW");
     o_GTEPW = (GTEPW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetTextExtentPoint32W");
+    fs_install();
+    diag_install();
 }
 
 // ---------------------------------------------------------------- version.dll forwarding
