@@ -9,7 +9,7 @@
 | exe 字串表 | **完成**：`language.txt` 903 條（`translation/lang/lang-out-*.json`），以 CP932＋借位碼寫出 |
 | 顯示 hook | 完成並實機確認：對話（微軟正黑體）、名字欄、換行、刪節號／破折號（細明體）、借位字、對話框標題與按鈕 |
 | UI 圖片 | **完成**：標題選單、設定各頁、存讀檔、CG／BGM／影片／場景鑑賞說明、對話設定、進度、跳轉中、場景標題、開機注意畫面（caution1/2） |
-| 安裝程式 | **RC4**：`<lab>\release-rc4\GrisaiaMelody-zhTW-Patch-0.9.3.exe`（RC3＋環境設定對話框繁中）；自我測試通過。RC3 視窗化四項擁有者已實機確認 |
+| 安裝程式 | **1.0.0 正式版**：`<lab>\release-1.0.0\GrisaiaMelody-zhTW-Patch-1.0.0.exe`（內容同 RC4 0.9.3）；自我測試通過；GitHub Releases `v1.0.0`（私人庫） |
 | GitHub | `Lendicez/grisaia-melody-zhtw-patch`（私人） |
 
 實機確認（payload-r8，2026-11-19）：開機注意畫面、標題選單、設定 Text／Dialog 頁、CG 鑑賞說明、結束確認對話框皆為繁中且無破圖。
