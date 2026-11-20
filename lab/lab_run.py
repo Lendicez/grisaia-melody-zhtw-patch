@@ -98,12 +98,12 @@ def client_box(h):
     return pt.x, pt.y, r.right, r.bottom
 
 def fg(h):
-    user32.ShowWindow(h, 9)
+    if user32.IsIconic(h): user32.ShowWindow(h, 9)   # 只在最小化時還原（否則會把最大化的視窗還原）
     fgw = user32.GetForegroundWindow()
     t1 = user32.GetWindowThreadProcessId(fgw, None); t2 = ctypes.windll.kernel32.GetCurrentThreadId()
     user32.AttachThreadInput(t2, t1, True); user32.SetForegroundWindow(h); user32.AttachThreadInput(t2, t1, False)
 
-VK = {"RETURN": 0x0D, "ESCAPE": 0x1B, "SPACE": 0x20, "CONTROL": 0x11, "UP": 0x26, "DOWN": 0x28, "LEFT": 0x25, "RIGHT": 0x27, "F1": 0x70}
+VK = {"F11": 0x7A, "RETURN": 0x0D, "ESCAPE": 0x1B, "SPACE": 0x20, "CONTROL": 0x11, "UP": 0x26, "DOWN": 0x28, "LEFT": 0x25, "RIGHT": 0x27, "F1": 0x70}
 
 def click(h, x, y, right=False, move_only=False):
     bx, by, bw, bh = client_box(h)
@@ -201,6 +201,20 @@ def main():
             elif "click" in st: fg(h); click(h, *st["click"])
             elif "rclick" in st: fg(h); click(h, *st["rclick"], right=True)
             elif "move" in st: fg(h); click(h, *st["move"], move_only=True)
+            elif "resize" in st:   # 依 client 尺寸調整外框
+                cw, ch = st["resize"]; r = W.RECT(0, 0, cw, ch)
+                stl = user32.GetWindowLongW(h, -16); exs = user32.GetWindowLongW(h, -20)
+                user32.AdjustWindowRectEx(ctypes.byref(r), stl, False, exs)
+                user32.SetWindowPos(h, 0, 50, 30, r.right - r.left, r.bottom - r.top, 0x0004 | 0x0010)
+                rep["events"].append(f"resize client {cw}x{ch}")
+            elif "maximize" in st: user32.ShowWindow(h, 3); rep["events"].append("maximize")
+            elif "restore_win" in st: user32.ShowWindow(h, 9); rep["events"].append("restore window")
+            elif "altenter" in st:
+                fg(h); user32.keybd_event(0x12, 0, 0, 0); time.sleep(0.05); user32.keybd_event(0x0D, 0, 0, 0); time.sleep(0.05)
+                user32.keybd_event(0x0D, 0, 2, 0); time.sleep(0.05); user32.keybd_event(0x12, 0, 2, 0); rep["events"].append("alt+enter")
+            elif "winfo" in st:
+                wr = W.RECT(); cr = W.RECT(); user32.GetWindowRect(h, ctypes.byref(wr)); user32.GetClientRect(h, ctypes.byref(cr))
+                rep["events"].append(f"winfo {st['winfo']}: window=({wr.left},{wr.top},{wr.right},{wr.bottom}) client={cr.right}x{cr.bottom} style={user32.GetWindowLongW(h, -16) & 0xffffffff:08x} zoomed={user32.IsZoomed(h)}")
             elif "key" in st: fg(h); key(st["key"])
             elif "close" in st:
                 user32.PostMessageW(h, 0x0010, 0, 0); rep["events"].append("WM_CLOSE sent")

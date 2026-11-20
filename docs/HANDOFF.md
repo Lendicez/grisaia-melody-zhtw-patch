@@ -9,7 +9,7 @@
 | exe 字串表 | **完成**：`language.txt` 903 條（`translation/lang/lang-out-*.json`），以 CP932＋借位碼寫出 |
 | 顯示 hook | 完成並實機確認：對話（微軟正黑體）、名字欄、換行、刪節號／破折號（細明體）、借位字、對話框標題與按鈕 |
 | UI 圖片 | **完成**：標題選單、設定各頁、存讀檔、CG／BGM／影片／場景鑑賞說明、對話設定、進度、跳轉中、場景標題、開機注意畫面（caution1/2） |
-| 安裝程式 | **RC2**：`<lab>\release-rc2\GrisaiaMelody-zhTW-Patch-0.9.1.exe`（含存檔路徑修正）；自我測試通過；**擁有者 2026-11-20 實機確認**：結束遊戲正常關閉、存檔／讀檔正常 |
+| 安裝程式 | **RC3**：`<lab>\release-rc3\GrisaiaMelody-zhTW-Patch-0.9.2.exe`（RC2＋視窗化強化）；自我測試通過。RC2（0.9.1）擁有者已確認結束與存讀檔正常 |
 | GitHub | `Lendicez/grisaia-melody-zhtw-patch`（私人） |
 
 實機確認（payload-r8，2026-11-19）：開機注意畫面、標題選單、設定 Text／Dialog 頁、CG 鑑賞說明、結束確認對話框皆為繁中且無破圖。
@@ -23,8 +23,18 @@
 - 診斷工具：`hook/zhtw_diag.c`（`[diag] exit=1`）記錄結束流程並在結束後傾印各執行緒堆疊；`[diag] fast_exit=1` 可在 ExitProcess 時直接結束程序（目前不需要）。
 - 驗證：diag-hang2（除錯版）與 rc2-exit（正式設定）按「是」後 4 秒內程序正常結束；存檔資料夾已寫入 savegen.dat、setup.xml。
 
+## 視窗化強化（2026-11-20，`hook/zhtw_window.c`，`[window] enable=1`）
+- 加上可拉動邊框與最大化按鈕；拖拉鎖 16:9；內容區與引擎尺寸不同時，Present 畫到置中等比區域、其餘塗黑。
+- 尺寸變化不轉給引擎（引擎收到會把視窗彈回原尺寸）；引擎重新套用同一尺寸時保留使用者的縮放／最大化；引擎改成不同尺寸時放行並結束自由縮放。
+- 滑鼠：視窗訊息、ScreenToClient／ClientToScreen、GetClientRect（遊戲呼叫時）換算成引擎尺寸；黑邊上的按下事件丟棄。
+- 引擎的全螢幕（Alt+Enter、F11、設定頁）：擋下 ChangeDisplaySettings（不改桌面解析度），把它的無邊框視窗擴到目前螢幕；離開後還原使用者原本的位置／大小（含最大化）。
+- 自動驗證（rc3-win）：最大化→點選單→Alt+Enter→還原回最大化→F11→還原→結束遊戲，皆正常；4:3 自由尺寸下點擊座標正確。
+- 探測工具：`hook/zhtw_wndprobe.c`（`[diag] wnd=1` 且 window 關閉時）記錄 D3D 裝置參數與引擎的視窗操作。
+- 正式 ini（`<lab>\reports\zhtw-release.ini`）：`[log] enable=0`、`[text] remap_acp=1`、`[font] override=1／charset_override=1／face=Microsoft JhengHei`、`[window] enable=1`。
+
 ## 已知問題
 - 自動測試時，選單的點擊偶爾只變成滑鼠停留（未進入頁面）；手動操作無此問題，System／Sound／Shortcut 頁以離線比對圖確認。
+- `lab_run.py` 的 fg() 以前每次都 ShowWindow(SW_RESTORE)，會把最大化的視窗還原；已改成只在最小化時還原。
 
 ## 下一步
 1. ~~RC2 實機確認~~（2026-11-20 完成：結束正常、存讀檔正常）。活動標題圖的「・」維持原樣（擁有者決定）。

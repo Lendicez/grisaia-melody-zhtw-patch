@@ -1,0 +1,8 @@
+[{"clicks": 6, "at": [640, 360], "gap": 1.2}, {"wait": 6}, {"winfo": "start"}, {"shot": "title"},
+ {"resize": [1600, 1200]}, {"wait": 3}, {"winfo": "4x3"}, {"shot": "4x3"},
+ {"move": [642, 478]}, {"wait": 1}, {"click": [642, 478]}, {"wait": 5}, {"shot": "4x3-config"},
+ {"rclick": [640, 400]}, {"wait": 4}, {"shot": "4x3-back"},
+ {"altenter": true}, {"wait": 5}, {"winfo": "border"}, {"screen": "border"},
+ {"altenter": true}, {"wait": 5}, {"winfo": "border-off"}, {"shot": "border-off"},
+ {"maximize": true}, {"wait": 3}, {"winfo": "max"}, {"shot": "max"},
+ {"restore_win": true}, {"wait": 3}, {"winfo": "restored"}]

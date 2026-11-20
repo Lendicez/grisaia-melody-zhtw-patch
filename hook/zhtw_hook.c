@@ -23,6 +23,8 @@ static int g_remap_acp = 1;          // 主程式以 CP_ACP 呼叫時也視為 9
 static int g_font_override = 1;
 static int g_charset_override = 1;
 static int g_diag_exit = 0, g_fast_exit = 0;   // [diag] 結束流程診斷／快速結束
+static int g_diag_wnd = 0;                    // [diag] wnd=1 視窗／繪圖行為探測
+static int g_win_enable = 0;                  // [window] enable=1 視窗化強化（等比縮放／最大化／無邊框全螢幕）
 static int g_fs_enable = 1;                   // [fs] 非 ASCII 路徑改走 W 版 API（存檔資料夾）
 static int g_font_scale = 100;       // 字高百分比
 static char g_font_face[LF_FACESIZE] = "Microsoft JhengHei";
@@ -82,6 +84,8 @@ static void load_config(void) {
     g_diag_exit = GetPrivateProfileIntW(L"diag", L"exit", 0, ini);
     g_fast_exit = GetPrivateProfileIntW(L"diag", L"fast_exit", 0, ini);
     g_fs_enable = GetPrivateProfileIntW(L"fs", L"enable", 1, ini);
+    g_diag_wnd = GetPrivateProfileIntW(L"diag", L"wnd", 0, ini);
+    g_win_enable = GetPrivateProfileIntW(L"window", L"enable", 0, ini);
     wchar_t face[LF_FACESIZE];
     if (GetPrivateProfileStringW(L"font", L"face", L"", face, LF_FACESIZE, ini) > 0)
         WideCharToMultiByte(CP_ACP, 0, face, -1, g_font_face, LF_FACESIZE, NULL, NULL);
@@ -318,9 +322,14 @@ static LRESULT WINAPI h_SMA(HWND h, UINT msg, WPARAM wp, LPARAM lp) {
 
 typedef HWND (WINAPI *CWEA_t)(DWORD, LPCSTR, LPCSTR, DWORD, int, int, int, int, HWND, HMENU, HINSTANCE, LPVOID);
 static CWEA_t o_CWEA;
+static void wnd_probe_on_create(HWND h, LPCSTR cls, DWORD style, DWORD ex);
+static DWORD win_create_style(LPCSTR cls, DWORD st);
+static void win_on_create(HWND h, LPCSTR cls);
 static HWND WINAPI h_CWEA(DWORD ex, LPCSTR cls, LPCSTR name, DWORD st, int x, int y, int w, int h, HWND p, HMENU m, HINSTANCE i, LPVOID lp) {
+    if (!p && from_exe(__builtin_return_address(0))) st = win_create_style(cls, st);
     HWND r = o_CWEA(ex, cls, name, st, x, y, w, h, p, m, i, lp);
     if (r && has_high(name) && from_exe(__builtin_return_address(0))) { WCHAR *t = dup932(name); if (t) { SetWindowTextW(r, t); freew(t); } }
+    if (r && !p) { win_on_create(r, cls); if (!g_win_enable) wnd_probe_on_create(r, cls, st, ex); }
     return r;
 }
 
@@ -335,6 +344,8 @@ static void hook(const char *mod, const char *name, void *det, void **orig) {
 
 #include "zhtw_diag.c"
 #include "zhtw_fs.c"
+#include "zhtw_wndprobe.c"
+#include "zhtw_window.c"
 
 static void install(void) {
     g_exe = GetModuleHandleW(NULL);
@@ -362,6 +373,7 @@ static void install(void) {
     if (!o_GGOW) o_GGOW = (GGOW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetGlyphOutlineW");
     o_GTEPW = (GTEPW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetTextExtentPoint32W");
     fs_install();
+    if (g_win_enable) win_install(); else wnd_probe_install();
     diag_install();
 }
 

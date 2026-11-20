@@ -1,0 +1,7 @@
+[{"clicks": 6, "at": [640, 360], "gap": 1.2}, {"wait": 6}, {"winfo": "start"}, {"shot": "title"},
+ {"resize": [1600, 900]}, {"wait": 3}, {"winfo": "resized"}, {"screen": "resized"},
+ {"wait": 3}, {"winfo": "resized+3s"},
+ {"maximize": true}, {"wait": 3}, {"winfo": "max"}, {"screen": "max"},
+ {"restore_win": true}, {"wait": 3}, {"winfo": "restored"},
+ {"altenter": true}, {"wait": 4}, {"winfo": "altenter"}, {"screen": "altenter"},
+ {"altenter": true}, {"wait": 4}, {"winfo": "altenter2"}, {"screen": "altenter2"}]
