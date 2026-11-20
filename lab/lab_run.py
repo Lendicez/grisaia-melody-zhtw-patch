@@ -207,6 +207,10 @@ def main():
                 user32.AdjustWindowRectEx(ctypes.byref(r), stl, False, exs)
                 user32.SetWindowPos(h, 0, 50, 30, r.right - r.left, r.bottom - r.top, 0x0004 | 0x0010)
                 rep["events"].append(f"resize client {cw}x{ch}")
+            elif "sclick" in st:   # 螢幕座標點擊（對話框等非遊戲視窗）
+                user32.SetCursorPos(*st["sclick"]); time.sleep(0.1)
+                user32.mouse_event(2, 0, 0, 0, 0); time.sleep(0.05); user32.mouse_event(4, 0, 0, 0, 0)
+                rep["events"].append(f"sclick {st['sclick']}")
             elif "maximize" in st: user32.ShowWindow(h, 3); rep["events"].append("maximize")
             elif "restore_win" in st: user32.ShowWindow(h, 9); rep["events"].append("restore window")
             elif "altenter" in st:

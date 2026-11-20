@@ -293,7 +293,18 @@ static void apply_repl(WCHAR *w) {
 static WCHAR *dup932(LPCSTR s) {
     int n = decode932(0, s, -1, NULL, 0); if (n <= 0) return NULL;
     WCHAR *w = (WCHAR *)HeapAlloc(GetProcessHeap(), 0, (n + 1) * sizeof(WCHAR));
-    decode932(0, s, -1, w, n); w[n] = 0; apply_repl(w); return w;
+    decode932(0, s, -1, w, n); w[n] = 0;
+    // cs2conf 有些字串會先轉回系統代碼頁（CP950）才送出：CP932 解出半形片假名（譯文不會有）且能以系統代碼頁嚴格解碼時，改用系統代碼頁
+    int hk = 0; for (int i = 0; i < n; i++) if (w[i] >= 0xFF61 && w[i] <= 0xFF9F) { hk = 1; break; }
+    if (hk && GetACP() != 932) {
+        int m = o_MBTWC(CP_ACP, MB_ERR_INVALID_CHARS, s, -1, NULL, 0);
+        if (m > 0) {
+            WCHAR *w2 = (WCHAR *)HeapAlloc(GetProcessHeap(), 0, (m + 1) * sizeof(WCHAR));
+            o_MBTWC(CP_ACP, MB_ERR_INVALID_CHARS, s, -1, w2, m); w2[m] = 0;
+            HeapFree(GetProcessHeap(), 0, w); w = w2;
+        }
+    }
+    apply_repl(w); return w;
 }
 static void freew(WCHAR *w) { if (w) HeapFree(GetProcessHeap(), 0, w); }
 
@@ -312,7 +323,9 @@ static BOOL WINAPI h_SDITA(HWND h, int id, LPCSTR s) {
     if (!from_exe(__builtin_return_address(0)) || !has_high(s)) return o_SDITA(h, id, s);
     WCHAR *w = dup932(s); BOOL r = SetDlgItemTextW(h, id, w ? w : L""); freew(w); return r;
 }
+static int dlg_conv_msg(HWND h, UINT msg, WPARAM wp, LPARAM lp, LRESULT *res);
 static LRESULT WINAPI h_SMA(HWND h, UINT msg, WPARAM wp, LPARAM lp) {
+    if (msg >= 0x1000 && msg < 0x1400 && from_exe(__builtin_return_address(0))) { LRESULT r; if (dlg_conv_msg(h, msg, wp, lp, &r)) return r; }
     if ((msg == WM_SETTEXT || msg == CB_ADDSTRING || msg == LB_ADDSTRING || msg == CB_INSERTSTRING || msg == LB_INSERTSTRING)
         && from_exe(__builtin_return_address(0)) && has_high((LPCSTR)lp)) {
         WCHAR *w = dup932((LPCSTR)lp); LRESULT r = SendMessageW(h, msg, wp, (LPARAM)w); freew(w); return r;
@@ -346,6 +359,7 @@ static void hook(const char *mod, const char *name, void *det, void **orig) {
 #include "zhtw_fs.c"
 #include "zhtw_wndprobe.c"
 #include "zhtw_window.c"
+#include "zhtw_dlg.c"
 
 static void install(void) {
     g_exe = GetModuleHandleW(NULL);
@@ -374,6 +388,7 @@ static void install(void) {
     o_GTEPW = (GTEPW_t)GetProcAddress(GetModuleHandleA("gdi32.dll"), "GetTextExtentPoint32W");
     fs_install();
     if (g_win_enable) win_install(); else wnd_probe_install();
+    dlg_install();
     diag_install();
 }
 
