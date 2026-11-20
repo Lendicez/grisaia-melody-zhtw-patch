@@ -9,7 +9,7 @@
 | exe 字串表 | **完成**：`language.txt` 903 條（`translation/lang/lang-out-*.json`），以 CP932＋借位碼寫出 |
 | 顯示 hook | 完成並實機確認：對話（微軟正黑體）、名字欄、換行、刪節號／破折號（細明體）、借位字、對話框標題與按鈕 |
 | UI 圖片 | **完成**：標題選單、設定各頁、存讀檔、CG／BGM／影片／場景鑑賞說明、對話設定、進度、跳轉中、場景標題、開機注意畫面（caution1/2） |
-| 安裝程式 | **RC2**：`<lab>\release-rc2\GrisaiaMelody-zhTW-Patch-0.9.1.exe`（含存檔路徑修正）；自我測試通過。RC1（0.9.0）擁有者已實機確認安裝／解除安裝 |
+| 安裝程式 | **RC2**：`<lab>\release-rc2\GrisaiaMelody-zhTW-Patch-0.9.1.exe`（含存檔路徑修正）；自我測試通過；**擁有者 2026-11-20 實機確認**：結束遊戲正常關閉、存檔／讀檔正常 |
 | GitHub | `Lendicez/grisaia-melody-zhtw-patch`（私人） |
 
 實機確認（payload-r8，2026-11-19）：開機注意畫面、標題選單、設定 Text／Dialog 頁、CG 鑑賞說明、結束確認對話框皆為繁中且無破圖。
@@ -27,7 +27,7 @@
 - 自動測試時，選單的點擊偶爾只變成滑鼠停留（未進入頁面）；手動操作無此問題，System／Sound／Shortcut 頁以離線比對圖確認。
 
 ## 下一步
-1. 擁有者以 RC2 安裝（會覆蓋 RC1），確認：按結束遊戲能正常關閉、遊戲內存檔／讀檔正常（bridge 不允許執行白名單外的 exe，需手動）。
+1. ~~RC2 實機確認~~（2026-11-20 完成：結束正常、存讀檔正常）。活動標題圖的「・」維持原樣（擁有者決定）。
 2. 擁有者實機通玩抽查（長訊息、backlog、存讀檔註記）後發行。
 3. RC1 的 payload 由 `build_patch.py … --lang <lab>\tx-lang --ui <lab>\ui\out --payload <lab>\reports\payload-rc1.json --version 0.9.0 --ini <lab>\reports\zhtw-release.ini` 產生（release ini 關閉 log）。
 4. `lab_run.py --payload` 結束後**不會**自動還原；測完用 `lab/restore_steam.py` 還原（會與 `pristine-ja` 比對）。
