@@ -5,4 +5,4 @@
 - 原文列雜湊（SHA-256 前 16 碼）只作版本核對。
 - `hook/third_party/minhook`：MinHook，BSD 2-Clause License（見該目錄 LICENSE）。
 - Blowfish 初始常數由 π 計算產生（`tools/gen_bf_tables.py`）；KIF 格式理解參考 GARbro（MIT）之公開說明，程式為獨立撰寫。
-- 開源授權尚未選定。1.0.0 經專案擁有者批准，以本私人庫的 GitHub Releases 發行。
+- 開源授權尚未選定。1.0.0 經專案擁有者批准，以本庫的 GitHub Releases 公開發行。

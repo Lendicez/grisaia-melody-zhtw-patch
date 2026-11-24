@@ -9,8 +9,8 @@
 | exe 字串表 | **完成**：`language.txt` 903 條（`translation/lang/lang-out-*.json`），以 CP932＋借位碼寫出 |
 | 顯示 hook | 完成並實機確認：對話（微軟正黑體）、名字欄、換行、刪節號／破折號（細明體）、借位字、對話框標題與按鈕 |
 | UI 圖片 | **完成**：標題選單、設定各頁、存讀檔、CG／BGM／影片／場景鑑賞說明、對話設定、進度、跳轉中、場景標題、開機注意畫面（caution1/2） |
-| 安裝程式 | **1.0.0 正式版**：`<lab>\release-1.0.0\GrisaiaMelody-zhTW-Patch-1.0.0.exe`（內容同 RC4 0.9.3）；自我測試通過；GitHub Releases `v1.0.0`（私人庫） |
-| GitHub | `Lendicez/grisaia-melody-zhtw-patch`（私人） |
+| 安裝程式 | **1.0.0 正式版**：`<lab>\release-1.0.0\GrisaiaMelody-zhTW-Patch-1.0.0.exe`（內容同 RC4 0.9.3）；自我測試通過；GitHub Releases `v1.0.0` |
+| GitHub | `Lendicez/grisaia-melody-zhtw-patch`（公開；2026-11-24 起） |
 
 實機確認（payload-r8，2026-11-19）：開機注意畫面、標題選單、設定 Text／Dialog 頁、CG 鑑賞說明、結束確認對話框皆為繁中且無破圖。
 
@@ -50,7 +50,7 @@
 4. `lab_run.py --payload` 結束後**不會**自動還原；測完用 `lab/restore_steam.py` 還原（會與 `pristine-ja` 比對）。
 
 ## 環境
-- 本機（lendicez-9800X3D，Win11，系統 ANSI 代碼頁 950）。
+- 擁有者本機：Win11，系統 ANSI 代碼頁 950。
 - 遊戲：`D:\SteamLibrary\steamapps\common\The Melody of Grisaia`（Steam AppID 464500，**日文版**；exe 有 SteamStub，只能經 Steam 啟動）。
 - 開發庫：`C:\GameDev\grisaia-melody-zhtw`（本庫）。lab：`C:\GameDev\grisaia-melody-lab`（解包原文、譯稿工作區、截圖、原版備份 `pristine-ja\`；**不入庫**）。
 - 雲端 Claude 經 LD2 的 bridge watcher（`C:\GameDev\LD2\zhTW_lab\ld2-autotest\bridge\queue`）在本機執行 python／git；Codex 以 `tools/codex_job.py` 背景派工。
